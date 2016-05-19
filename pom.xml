@@ -39,6 +39,11 @@
             </configuration>
           </execution>
         </executions>
+        <configuration>
+          <url>http://localhost:8080/manager/text</url>
+          <server>TomcatServer</server>
+          <path>/JenkinsTestWepAppp</path>
+        </configuration>
       </plugin>
     </plugins>
   </build>
