@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MyController {
 
-    private int counter = 0;
+    private static int counter = 0;
     private final String VIEW_INDEX = "index";
     private final org.slf4j.Logger logger = LoggerFactory.getLogger(MyController.class);
 
