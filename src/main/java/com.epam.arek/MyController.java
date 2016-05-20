@@ -6,6 +6,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class MyController {
@@ -15,14 +16,21 @@ public class MyController {
     private final static org.slf4j.Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String welcome(ModelMap model) {
+    public ModelAndView welcome() { //ModelMap model
 
-        model.addAttribute("message", "Welcome");
-        model.addAttribute("counter", ++counter);
+        //model.addAttribute("message", "Welcome");
+        //model.addAttribute("counter", ++counter);
+
+
+        ModelAndView model = new ModelAndView();
+        model.setViewName("index");
+        model.addObject("message", "Welcome");
+        model.addObject("counter", ++counter);
         logger.debug("[welcome] counter : {}", counter);
+        return model;
 
         // Spring uses InternalResourceViewResolver and return back index.jsp
-        return VIEW_INDEX;
+        //return VIEW_INDEX;
 
     }
 
