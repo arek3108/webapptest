@@ -12,8 +12,8 @@ import org.springframework.web.servlet.ModelAndView;
 public class MyController {
 
     private static int counter = 0;
-    private final String VIEW_INDEX = "index";
-    private final org.slf4j.Logger logger = LoggerFactory.getLogger(MyController.class);
+    private static final String VIEW_INDEX = "index";
+    private final static org.slf4j.Logger logger = LoggerFactory.getLogger(MyController.class);
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView welcome() { //ModelMap model
