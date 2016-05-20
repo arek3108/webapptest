@@ -43,4 +43,8 @@ public class MyController {
 
     }
 
+    public int myFunction() {
+        return 1;
+    }
+
 }
