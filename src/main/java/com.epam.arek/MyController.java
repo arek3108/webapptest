@@ -28,7 +28,7 @@ public class MyController {
 
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public String welcomeName(@PathVariable String name, ModelMap model) {
-
+        assert false;
         model.addAttribute("message", "Welcome " + name);
         model.addAttribute("counter", ++counter);
         logger.debug("[welcomeName] counter : {}", counter);
